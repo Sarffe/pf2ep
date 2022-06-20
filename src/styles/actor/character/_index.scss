@@ -1,0 +1,46 @@
+@import "proficiency-ranks";
+
+aside .sidebar {
+    @import "sidebar";
+}
+
+nav.sheet-navigation {
+    .item {
+        &.to-hide {
+            opacity: 45%;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .manage-tabs {
+        color: white;
+        margin: 0;
+        padding: 0 6px;
+    }
+}
+
+.sheet-body .sheet-content {
+    .tab {
+        @import "character", "actions", "effects", "spellcasting", "proficiencies", "feats", "bio", "inventory", "pfs", "crafting";
+    }
+
+    .directory-list {
+        @include p-reset;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+
+        h4 {
+            @include p-reset;
+        }
+
+        .item {
+            ol {
+                list-style: none;
+            }
+        }
+    }
+}

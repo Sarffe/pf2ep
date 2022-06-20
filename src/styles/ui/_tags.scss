@@ -1,0 +1,124 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    list-style-type: none;
+    margin-bottom: 2px;
+
+    .tag, .tag option {
+        @include micro;
+        align-items: center;
+        background-color: var(--primary);
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 1px rgba(black, 0.5);
+        color: white;
+        display: flex;
+        font-weight: 500;
+        height: 1.5em;
+        padding: 0 0.33em;
+
+        &.edit-btn {
+            align-items: center;
+            background-color: white;
+            border-radius: 0;
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+
+            a {
+                display: inline-flex;
+                svg {
+                    height: 9px;
+                    width: auto;
+                }
+            }
+        }
+
+        &.tag_secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        &.tag_tertiary {
+            background-color: var(--tertiary);
+            color: white;
+        }
+
+        &.tag_alt {
+            background-color: var(--alt);
+            color: white;
+        }
+
+        &.tag_material {
+            background-color: var(--alt-dark);
+            color: white;
+        }
+
+        &.tag_transparent {
+            background-color: transparent;
+            color: var(--text-color-dark-2);
+            text-transform: none;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-10);
+            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 30%);
+            border-radius: 4px;
+        }
+
+        &.mystified {
+            opacity: 0.7;
+        }
+
+        &.common, &[value="common"] {
+            border-color: $rarity-common;
+            background-color: $rarity-common;
+        }
+
+        &.uncommon, &[value="uncommon"] {
+            border-color: $rarity-uncommon;
+            background-color: $rarity-uncommon;
+        }
+
+        &.rare, &[value="rare"] {
+            border-color: $rarity-rare;
+            background-color: $rarity-rare;
+        }
+
+        &.unique, &[value="unique"] {
+            border-color: $rarity-unique;
+            background-color: $rarity-unique;
+        }
+    }
+
+    select.tag {
+        border: none;
+        padding: 0;
+        height: auto;
+    }
+
+    &.main .tag {
+        font-size: var(--font-size-12);
+    }
+}
+
+li.chat-message .tags .tag {
+    height: 1rem;
+}
+
+.damage-tag {
+    white-space: nowrap;
+    margin: 0 1px 1px 0;
+    padding: 0 3px;
+    font-size: var(--font-size-10);
+    line-height: 16px;
+    border: 1px solid #999;
+    border-radius: 3px;
+
+    &-base {
+        color: white;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+    &-modifier {
+        background: rgba(0, 0, 0, 0.05);
+    }
+}
