@@ -3,7 +3,6 @@ const MAGIC_SCHOOLS = new Set([
     "conjuration",
     "divination",
     "enchantment",
-    "evocation",
     "illusion",
     "necromancy",
     "transmutation",
