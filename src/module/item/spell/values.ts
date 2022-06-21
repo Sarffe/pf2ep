@@ -7,12 +7,12 @@ const MAGIC_SCHOOLS = new Set([
     "illusion",
     "necromancy",
     "transmutation",
-	"clairsentience",
-	"metacreativity",
-	"psychokinesis",
-	"psychometabolism",
-	"psychoportation",
-	"telepathy",
+    "clairsentience",
+    "metacreativity",
+    "psychokinesis",
+    "psychometabolism",
+    "psychoportation",
+    "telepathy",
 ] as const);
 
 const MAGIC_TRADITIONS = new Set(["arcane", "divine", "occult", "primal", "psionic"] as const);
